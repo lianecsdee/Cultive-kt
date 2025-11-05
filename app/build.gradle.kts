@@ -36,6 +36,7 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding = true
     }
 }
 
@@ -60,4 +61,28 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    val retrofit_version = "2.9.0"
+    implementation("com.squareup.retrofit2:retrofit:$retrofit_version")
+    implementation("com.squareup.retrofit2:converter-gson:$retrofit_version")
+
+    val coroutines_version = "1.7.3" // Use a versão mais recente
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version")
+
+    // 3. (Opcional, mas recomendado) Logging de requisições com OkHttp
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+
+    // Dependência necessária para 'by viewModels()' e outras extensões de Fragment.
+    val fragment_version = "1.7.0" // Use a versão mais recente
+    implementation("androidx.fragment:fragment-ktx:$fragment_version")
+
+    // Dependência para 'by viewModels()' em Activity (embora você esteja em Fragment, é bom ter)
+    val activity_version = "1.9.0" // Use a versão mais recente
+    implementation("androidx.activity:activity-ktx:$activity_version")
+
+    // Dependência de Lifecycle e ViewModel
+    val lifecycle_version = "2.8.0" // Use a versão mais recente
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    // (Opcional, mas comum)
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
 }
