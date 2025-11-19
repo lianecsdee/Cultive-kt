@@ -2,6 +2,8 @@ package com.cultiveplus.cultiveplusapp.model
 
 data class Estufa(
     val id: Int ,
-    val name: String
+    val name: String,
+    val email: String,
+
 )
 
