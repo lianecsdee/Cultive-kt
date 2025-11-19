@@ -1,18 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="40dp"
+    android:layout_marginVertical="12dp"
+    app:cardCornerRadius="17dp"
+    app:cardElevation="4dp">
 
-    <TextView
-        android:id="@+id/tvNomeEstufa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/imgPlanta"
+            android:layout_width="0dp"
+            android:layout_height="276dp"
+            android:scaleType="centerCrop"
+            android:src="@android:drawable/ic_menu_gallery"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="#C8E6C9" />
+
+        <View
+            android:id="@+id/fundoVerde"
+            android:layout_width="0dp"
+            android:layout_height="106dp"
+            android:background="#1B5E20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgPlanta" />
+
+        <TextView
+            android:id="@+id/tvNomePlanta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/figtree_bold"
+            android:text="Planta"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/iconTemp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/fundoVerde" />
+
+        <TextView
+            android:id="@+id/tvNomeEstufa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alexandria"
+            android:text="Nome estufa"
+            android:textColor="#E0E0E0"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/tvNomePlanta"
+            app:layout_constraintTop_toBottomOf="@id/tvNomePlanta" />
+
+        <ImageView
+            android:id="@+id/iconAgua"
+            android:layout_width="59dp"
+            android:layout_height="59dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/gota_boa"
+            app:layout_constraintBottom_toBottomOf="@+id/fundoVerde"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/fundoVerde" />
+
+        <ImageView
+            android:id="@+id/iconTemp"
+            android:layout_width="59dp"
+            android:layout_height="59dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/temp_boa"
+            app:layout_constraintBottom_toBottomOf="@+id/iconAgua"
+            app:layout_constraintEnd_toStartOf="@+id/iconAgua"
+            app:layout_constraintTop_toTopOf="@+id/iconAgua" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
