@@ -32,9 +32,9 @@ class EstufaAdapter(  private val onItemClicked: (Estufa) -> Unit): ListAdapter<
 
     inner class EstufaViewHolder(private val binding: ItemEstufaBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(estufa: Estufa){
-            binding.tvNomeEstufa.text = estufa.name
+            binding.tvNomePlanta.text = estufa.name
 //            binding.tvName.text = estufa.name
-//            binding.tvEmail.text = estufa.email
+              binding.tvNomeEstufa.text = estufa.email
         }
     }
 

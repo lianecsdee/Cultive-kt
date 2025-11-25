@@ -4,4 +4,6 @@
     <string name="estufas_nao_encontradas">Estufas não encontradas.</string>
     <string name="msg_erro">Estufas não encontradas.</string>
     <string name="dica_nenhumaestufa">Crie sua primeira estufa</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
