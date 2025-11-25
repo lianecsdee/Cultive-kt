@@ -42,23 +42,41 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
+
             android:fontFamily="@font/figtree_bold"
             android:text="Planta"
             android:textColor="#FFFFFF"
             android:textSize="36sp"
             android:textStyle="bold"
+
+            android:maxLines="1"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="16sp"
+            app:autoSizeMaxTextSize="36sp"
+            app:autoSizeStepGranularity="2sp"
+
             app:layout_constraintEnd_toStartOf="@+id/iconTemp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/fundoVerde" />
 
         <TextView
             android:id="@+id/tvNomeEstufa"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+
             android:fontFamily="@font/alexandria"
             android:text="Nome estufa"
             android:textColor="#E0E0E0"
             android:textSize="14sp"
+
+            android:maxLines="1"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeMaxTextSize="14sp"
+            app:autoSizeStepGranularity="1sp"
+
+            app:layout_constraintEnd_toStartOf="@+id/iconTemp"
             app:layout_constraintStart_toStartOf="@id/tvNomePlanta"
             app:layout_constraintTop_toBottomOf="@id/tvNomePlanta" />
 
