@@ -7,7 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cultiveplus.cultiveplusapp.databinding.ItemEstufaBinding
 
 
-class EstufaAdapter(  private val onItemClicked: (Estufa) -> Unit): ListAdapter<Estufa, EstufaAdapter.EstufaViewHolder>(EstufaDiffCallback()) {
+class EstufaAdapter(  private val onItemClicked: (Estufa) -> Unit
+): ListAdapter<Estufa, EstufaAdapter.EstufaViewHolder>(EstufaDiffCallback()) {
 
     override fun onCreateViewHolder(
 
@@ -22,12 +23,12 @@ class EstufaAdapter(  private val onItemClicked: (Estufa) -> Unit): ListAdapter<
         holder: EstufaViewHolder,
         position: Int
     ) {
-        val user = getItem(position)
-        holder.bind(user)
+        val estufa = getItem(position)
+        holder.bind(estufa)
 
-//        holder.itemView.setOnClickListener {
-//            onItemClicked(user)
-//        }
+        holder.itemView.setOnClickListener {
+            onItemClicked(estufa)
+        }
     }
 
     inner class EstufaViewHolder(private val binding: ItemEstufaBinding) : RecyclerView.ViewHolder(binding.root){

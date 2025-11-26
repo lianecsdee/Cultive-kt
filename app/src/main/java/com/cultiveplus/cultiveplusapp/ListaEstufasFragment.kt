@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import androidx.fragment.app.viewModels
 import com.cultiveplus.cultiveplusapp.databinding.FragmentListaEstufasBinding
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -72,10 +73,16 @@ class ListaEstufasFragment : Fragment() {
     }
 
     private fun setupRecyclerView() {
-        estufaAdapter = EstufaAdapter{ estufa -> }
+        estufaAdapter = EstufaAdapter{ estufa ->
+            val intent = DetalhesEstufaActivity.newIntent(requireContext()).apply {
+                putExtra("estufa", estufa)
+            }
+            startActivity(intent)
+        }
         binding.recyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = estufaAdapter
         }
     }
+
 }
