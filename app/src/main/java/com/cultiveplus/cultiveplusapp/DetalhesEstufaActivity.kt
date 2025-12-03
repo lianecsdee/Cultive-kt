@@ -18,6 +18,15 @@ class DetalhesEstufaActivity : AppCompatActivity() {
         enableEdgeToEdge()
         val  binding = ActivityDetalhesEstufaBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+        // Oi marcelo e qm estiver lendo. adicionei a lógica do botão voltar
+        binding.btnVoltar.setOnClickListener {
+            finish()
+        }
+
+
+
         val estufa: Estufa? = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             intent.getSerializableExtra("estufa", Estufa::class.java)
         } else {
