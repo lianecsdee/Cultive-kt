@@ -35,6 +35,12 @@
             android:name=".NovaEstufaActivity"
             android:exported="false" />
 
+        <activity android:name=".DicasActivity"
+            android:exported="false" />
+
+        <activity android:name=".MinhaContaActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

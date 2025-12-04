@@ -82,6 +82,8 @@ class ListaEstufasFragment : Fragment() {
         binding.recyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = estufaAdapter
+
+            isNestedScrollingEnabled = false
         }
     }
 
