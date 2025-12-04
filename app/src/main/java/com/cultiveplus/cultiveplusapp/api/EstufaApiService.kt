@@ -12,7 +12,7 @@ interface EstufaApiService {
 
     // 1. MÉTODO GET: Buscar a lista completa de estufas
     // URL: http://72.61.62.21/~marcelo/restapi/api/estufas
-    @GET("estufas")
+    @GET("estufas/")
     suspend fun getEstufas(): Response<List<Estufa>>
 
     // 2. MÉTODO GET por ID (com parâmetro de caminho)
