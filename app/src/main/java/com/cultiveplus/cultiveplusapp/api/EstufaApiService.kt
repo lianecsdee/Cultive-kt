@@ -12,12 +12,13 @@ interface EstufaApiService {
 
     // 1. MÉTODO GET: Buscar a lista completa de estufas
     // URL: http://72.61.62.21/~marcelo/restapi/api/estufas
-    @GET("estufas/")
+    @GET("estufas/" )
     suspend fun getEstufas(): Response<List<Estufa>>
 
     // 2. MÉTODO GET por ID (com parâmetro de caminho)
     // URL: https://jsonplaceholder.typicode.com/users/{id}
 //    @GET("users/{id}")
+    //1
 //    suspend fun getEstufa(@Path("id") userId: Int): Response<User>
 
     // 3. MÉTODO POST: Enviar um novo recurso (exemplo)
