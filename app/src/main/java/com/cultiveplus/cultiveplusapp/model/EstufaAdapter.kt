@@ -33,9 +33,9 @@ class EstufaAdapter(  private val onItemClicked: (Estufa) -> Unit
 
     inner class EstufaViewHolder(private val binding: ItemEstufaBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(estufa: Estufa){
-            binding.tvNomePlanta.text = estufa.name
+            binding.tvNomePlanta.text = estufa.nome
 //            binding.tvName.text = estufa.name
-              binding.tvNomeEstufa.text = estufa.email
+              binding.tvNomeEstufa.text = estufa.tipo.nome
         }
     }
 

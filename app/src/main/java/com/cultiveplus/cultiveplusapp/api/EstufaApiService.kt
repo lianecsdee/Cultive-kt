@@ -10,9 +10,9 @@ interface EstufaApiService {
     // TROCANDO APENAS O 'index' por 'all'
     // AS BOAS PRÁTICAS DO KOTLIN SUGEREM USAR NOMES DE MÉTODOS COM "VERBOS DESCRITIVOS"
 
-    // 1. MÉTODO GET: Buscar a lista completa de usuários
-    // URL: https://jsonplaceholder.typicode.com/users
-    @GET("users")
+    // 1. MÉTODO GET: Buscar a lista completa de estufas
+    // URL: http://72.61.62.21/~marcelo/restapi/api/estufas
+    @GET("estufas")
     suspend fun getEstufas(): Response<List<Estufa>>
 
     // 2. MÉTODO GET por ID (com parâmetro de caminho)

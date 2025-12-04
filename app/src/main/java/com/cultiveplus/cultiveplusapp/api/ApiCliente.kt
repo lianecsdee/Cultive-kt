@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 object ApiCliente {
-    private const val BASE_URL = "https://jsonplaceholder.typicode.com/"
+    private const val BASE_URL = "http://72.61.62.21/~marcelo/restapi/api/"
 
     // Cliente OkHttp com interceptor de logs (para debug, altamente recomendado)
     private val client = OkHttpClient.Builder()

@@ -6,10 +6,7 @@ import android.os.Build
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.cultiveplus.cultiveplusapp.databinding.ActivityDetalhesEstufaBinding
-import com.cultiveplus.cultiveplusapp.databinding.ActivityMainBinding
 import com.cultiveplus.cultiveplusapp.model.Estufa
 
 class DetalhesEstufaActivity : AppCompatActivity() {
@@ -34,7 +31,7 @@ class DetalhesEstufaActivity : AppCompatActivity() {
         }
 
         if (estufa != null) {
-            binding.tvTituloDetalhe.text = estufa.name
+            binding.tvTituloDetalhe.text = estufa.nome
         }
     }
     companion object {
